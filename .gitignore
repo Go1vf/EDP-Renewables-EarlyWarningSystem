@@ -1,2 +1,4 @@
 data/*
 saved_models/*
+saved_results/*
+simple_neural_network/__pycache__/*
