@@ -68,12 +68,12 @@ class Process_XYData:
 
     def balance_and_split(self, X, Y, test_size):
         # Balance the training data
-        smote = SMOTE(sampling_strategy='auto', random_state=42)
+        smote = SMOTE(sampling_strategy='auto')
         X, Y = smote.fit_resample(X, Y)
 
         # Seperate and save validation data
         X_train, X_val, y_train, y_val = train_test_split(
-            X, Y, test_size=test_size, random_state=42, stratify=Y)
+            X, Y, test_size=test_size, stratify=Y)
         return X_train, y_train, X_val, y_val
 
     def save_fitted_scaler(self, filename):

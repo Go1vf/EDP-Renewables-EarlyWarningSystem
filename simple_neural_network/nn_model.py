@@ -1,5 +1,5 @@
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.models import load_model
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
@@ -11,7 +11,9 @@ class NNModel:
     def make_model(self, input_size):
         model = Sequential([
             Dense(128, activation="relu", input_shape=(input_size,)),
+            Dropout(0.1),
             Dense(64, activation="relu"),
+            Dropout(0.1),
             Dense(32, activation="relu"),
             Dense(1, activation="sigmoid")
         ])
