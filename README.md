@@ -1,0 +1,2 @@
+In our project, we focused on improving the predictive accuracy of wind turbine defaults through the use of advanced data mining techniques and a diverse array of machine learning models. Our approach was based on thorough data preprocessing and feature engineering, complemented by the deployment of several models, including Isolation Tree, Support Vector Machine
+(SVM), Vanilla Neural Network, and Long Short-Term Memory (LSTM)
